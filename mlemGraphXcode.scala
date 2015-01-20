@@ -35,10 +35,6 @@ def messageCombiner(a: Double, b: Double): Double = a + b
 val initialMessage = 0.0
 val numIter = 1
 
-graph.vertices.count
-graph.edges.count
-p_measured.count
-
 /*Pregel is the built-in graph operation modified as a matrix multiplication
 operation*/
 val start = System.currentTimeMillis
@@ -61,4 +57,3 @@ val end = System.currentTimeMillis
 end - start
 
 val answer = graph.vertices.filter{ case (vid, attr) => vid<numj}.filter{ case (vid, attr) => attr>0}
-answer.foreach(println)
